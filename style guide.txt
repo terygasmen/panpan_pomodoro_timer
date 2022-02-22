@@ -1,0 +1,43 @@
+
+# Fonts
+
+numbers: Open Sans
+text: Inter
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&family=Open+Sans:wght@600;800&display=swap');
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+~~~~~~~~~~~
+
+# Colors
+
+dark grey: 2F2F2F
+mint: 92B4A7
+yellow: F3F9D2
+pink: FFC6D9
+blue: 62B6CB
+
+https://coolors.co/ffc6d9-f3f9d2-62b6cb-2f2f2f-92b4a7
+
+~~~~~~~~~~~
+
+# Design
+
+https://www.pinterest.ph/tery_rambin/panpan/
+
+~~~~~~~~~~~
+
+# Sections
+
+- timer
+- session tracker
+- navigation (dark mode, pause timer, restart timer)
+
+~~~~~~~~~~~
+
+# Icons
+
+dark mode: <i class="fa-solid fa-circle-dot"></i>
+circle: <i class="fa-solid fa-circle"></i>
+square: <i class="fa-solid fa-square"></i>
