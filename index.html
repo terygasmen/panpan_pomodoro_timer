@@ -13,14 +13,14 @@
     <nav>
         <div class="settings">
             <!--dark mode-->
-            <button class="dark_mode"><i class="fa-solid fa-circle-dot"></i></button> 
+            <button class="dark_mode" onclick="darkmode()"><i class="fa-solid fa-circle-dot"></i></button> 
             <!--pause timer-->
             <button class="pause" id="pause"><i class="fa-solid fa-square"></i></button> 
             <!--restart timer-->
             <button class="restart" id="restart"><i class="fa-solid fa-circle"></i></button> 
         </div>
         <div class="session_tracker">
-            <span>
+            <span class="session_tracker_container">
                 <p>Session: </p>
                 <p id="counter">0</p>
             </span>
@@ -32,26 +32,27 @@
         <!--focus timer-->
         <div id="focus_timer">
             <!--minute timer-->
-            <div class="min_timer"><h1 class="num" id="f_min_timer">25</h1></div>
+            <div class="min_timer"><h1 class="timer" id="f_min_timer">25</h1></div>
             <!--second timer-->
-            <div class="sec_timer"><h1>:</h1><h1 class="num" id="f_sec_timer">00</h1></div>
+            <div class="sec_timer"><h1 class="timer">:</h1><h1 class="timer" id="f_sec_timer">00</h1></div>
             <!--start button-->
-            <div class="start_timer"><button id="start"><p>Start</p></button></div>
+            <div class="start_timer"><button id="start" class="start_timer_button"><p>Start</p></button></div>
         </div>
 
         <!--break timer-->
         <div id="break_timer" class="hide_timer">
             <!--minute timer-->
-            <div class="min_timer"><h1 class="num" id="b_min_timer">05</h1></div>
+            <div class="min_timer"><h1 class="timer" id="b_min_timer">05</h1></div>
             <!--second timer-->
-            <div class="sec_timer"><h1>:</h1><h1 class="num" id="b_sec_timer">00</h1></div>
+            <div class="sec_timer"><h1 class="timer">:</h1><h1 class="timer"" id="b_sec_timer">00</h1></div>
             <!--start button-->
-            <div class="start_timer"><button id="start"><p>Start</p></button></div>
+            <div class="start_timer"><button id="start" class="start_timer_button"><p>Start</p></button></div>
         </div>
     </main>
 
     <!--Javascript files-->
     <script src="main.js"></script>
+    <script src="darkmode.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

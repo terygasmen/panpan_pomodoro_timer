@@ -62,12 +62,12 @@ nav {
 .session_tracker {
     max-width: fit-content; 
 }
-.session_tracker span {
+.session_tracker_container {
     background-color: var(--dark_grey);
     padding: 5px 20px;
-    display: flex;
     border-radius: 10px;
     column-gap: 10px;
+    display: flex;
 }
 .session_tracker p {
     color: white;
@@ -76,7 +76,7 @@ nav {
 }
 .settings button {
     margin-right: 40px;
-    background-color: white;
+    background: none;
 }
 .settings i {
     font-size: 50px;
@@ -87,6 +87,7 @@ nav {
 /* break timer */
 .hide_timer {
     display: none;
+    visibility: hidden;
 }
 #focus_timer, #break_timer {
     display: grid;
@@ -94,6 +95,9 @@ nav {
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+}
+.timer{
+    color: var(--dark_grey);
 }
 
 .min_timer {
@@ -118,24 +122,44 @@ nav {
 .min_timer h1 {
     font-size: 280px;
     margin: 0;
-    color: var(--dark_grey);
 }
 .sec_timer h1 {
     margin: 0;
-    color: var(--dark_grey);
     font-size: 100px;
 }
-.start_timer button {
+.start_timer_button {
     padding: 20px 40px;
     border-width: 3px;
     border-color: var(--dark_grey);
     border-radius: 10px;
-    background-color: var(--blue);
     box-shadow: 2px 2px var(--dark_grey);
-}.start_timer p {
+    background-color: var(--blue);
+}
+.start_timer p {
     margin: 0;
     color: white;
     font-size: 25px;
 }
 
-
+/* dark mode */
+.dm_body {
+    background-color: var(--dark_grey);
+}
+.dm_fa-circle-dot {
+    color: var(--mint);
+}
+.dm_fa-square {
+    color: var(--mint);
+}
+.dm_fa-circle {
+    color: var(--mint);
+}
+.dm_session_tracker_container{
+    background-color: var(--mint);
+}
+.dm_timer{
+    color: var(--yellow);
+}
+.dm_start_timer_button{
+    background-color: var(--mint);
+}

@@ -1,0 +1,20 @@
+function darkmode(){
+    if($('body').hasClass('dm_body')){
+        $('body').removeClass('dm_body');
+        $('.fa-circle-dot').removeClass('dm_fa-circle-dot');
+        $('.fa-square').removeClass('dm_fa-square');
+        $('.fa-circle').removeClass('dm_fa-circle');
+        $('.session_tracker_container').removeClass('dm_session_tracker_container');
+        $('.timer').removeClass('dm_timer');
+        $('.start_timer_button').removeClass('dm_start_timer_button');
+    }
+    else{
+        $('body').addClass('dm_body');
+        $('.fa-circle-dot').addClass('dm_fa-circle-dot');
+        $('.fa-square').addClass('dm_fa-square');
+        $('.fa-circle').addClass('dm_fa-circle');
+        $('.session_tracker_container').addClass('dm_session_tracker_container');
+        $('.timer').addClass('dm_timer');
+        $('.start_timer_button').addClass('dm_start_timer_button');
+    }
+}

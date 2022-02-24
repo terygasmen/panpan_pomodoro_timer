@@ -37,10 +37,10 @@ restart.addEventListener(
         $('#break_timer').addClass('hide_timer');
 
         f_min_timer.innerText = '25';
-        f_sec_timer.innerText = 0 + '0';
+        f_sec_timer.innerText = 0;
 
         b_min_timer.innerText = '5';
-        b_sec_timer.innerText = 0 + '0';
+        b_sec_timer.innerText = 0;
 
         document.getElementById('counter').innerText = '0';
         stopInterval()
@@ -56,10 +56,17 @@ pause.addEventListener(
     }
 )
 
+// add zero padding to single digit numbers
+function padStrings(){
+    if(num.innerText < 10){
+        num.innerText.padStart(2, '0');
+    }
+}
 
 // start timer function
 function timer(){
     tickAudio.play();
+    padStrings();
     //hide break timer while focus timer is active
     $('#focus_timer').removeClass('hide_timer');
     $('#break_timer').addClass('hide_timer');
@@ -67,35 +74,22 @@ function timer(){
     //focus timer countdown
     if(f_sec_timer.innerText != 0){
         f_sec_timer.innerText--;
-        if (f_sec_timer.innerText < 10) {
-            parseInt(f_sec_timer.innerText = '0' + f_sec_timer.innerText.toString()); 
-        }
     }
     else if(f_min_timer.innerText != 0 && f_sec_timer.innerText == 0){
         f_sec_timer.innerText = 59;
         f_min_timer.innerText--;
-        if (f_min_timer.innerText < 10) {
-            parseInt(f_min_timer.innerText = '0' + f_min_timer.innerText.toString()); 
-        }
     }
 
     // break timer countdown
     if(f_min_timer.innerText == 0 && f_sec_timer.innerText == 0){
-        // hide focus timer while the break timer is active
         $('#focus_timer').addClass('hide_timer');
         $('#break_timer').removeClass('hide_timer');
         if(b_sec_timer.innerText != 0){
             b_sec_timer.innerText--;
-            if (b_sec_timer.innerText < 10) {
-                parseInt(b_sec_timer.innerText = '0' + b_sec_timer.innerText.toString()); 
-            }
         }
         else if(b_min_timer.innerText != 0 && b_sec_timer.innerText == 0){
             b_sec_timer.innerText = 59;
             b_min_timer.innerText--;
-            if (b_min_timer.innerText < 10) {
-                parseInt(b_min_timer.innerText = '0' + b_min_timer.innerText.toString()); 
-            }
         }
     }
 
